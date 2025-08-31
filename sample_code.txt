@@ -1,0 +1,29 @@
+import streamlit as st
+
+def main():
+    st.title('BMI CALCULATOR')
+    weight = st.number_input("Enter your weight in Kgs")
+    height = st.number_input("Enter your height in m")
+    if height==0:
+        bmi = 0
+    else:
+        bmi = weight/height**2
+
+    if st.button('Calculate BMI'):
+            st.success(f'Your BMI is {round(bmi,2)}')
+if __name__=='__main__': 
+    main()
+
+
+
+import streamlit as st
+
+# App title
+st.title("?? Simple Streamlit App")
+
+# Text input
+name = st.text_input("Enter your name:")
+
+# Button
+if st.button("Greet"):
+    st.success(f"Hello, {name}!")
